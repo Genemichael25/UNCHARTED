@@ -1,3 +1,8 @@
 class Trip < ApplicationRecord
-    belongs_to :user
+    validates :name, :location, :from, :to, :travel_buddies, :image, :comments, presence: true
 end
+
+
+
+
+
