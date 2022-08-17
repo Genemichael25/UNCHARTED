@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 
+
 class NotFound extends Component {
   render() {
-    return <div>NotFound</div>;
+    return (
+    <>
+    <h3> OOPS, PAGE NOT FOUND!</h3> 
+    
+    </>
+    )
   }
 }
 
