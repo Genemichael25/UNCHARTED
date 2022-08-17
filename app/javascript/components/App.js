@@ -28,7 +28,19 @@ class App extends Component {
     console.log("sign_out_route:", sign_out_route);
     return (
       <>
-        <h1>UNCHARTED App</h1>
+        <Router>
+        <Header/>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/tripindex" component={TripIndex} />
+          <Route path="/tripshow" component={TripShow} />
+          <Route path="/tripnew" component={TripNew} />
+          <Route path="/tripedit" component={TripEdit} />
+          <Route path="/aboutus" component={AboutUs} />
+          <Route path="/externalresources" component={ExternalResources} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
       </>
     );
   }
