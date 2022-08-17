@@ -10,7 +10,7 @@ class Footer extends Component {
             About Us
           </NavLink>
           <div className="org-footer">
-          ©Uncharted 2022 | Code Empire
+            ©Uncharted 2022 | Code Empire
           </div>
           <NavLink to={`/externalresources`}>
             External Resources
