@@ -40,6 +40,7 @@ class App extends Component {
           <Route path="/externalresources" component={ExternalResources} />
           <Route component={NotFound} />
         </Switch>
+        <Footer />
       </Router>
       </>
     );
