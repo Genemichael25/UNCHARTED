@@ -10,6 +10,7 @@ import TripEdit from "./pages/TripEdit";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import ExternalResources from "./pages/ExternalResources";
+import SevenWonders from "./pages/SevenWonders"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
           <Route path="/tripnew" component={TripNew} />
           <Route path="/tripedit" component={TripEdit} />
           <Route path="/aboutus" component={AboutUs} />
+          <Route path="/sevenwonders" component={SevenWonders} />
           <Route path="/externalresources" component={ExternalResources} />
           <Route component={NotFound} />
         </Switch>
