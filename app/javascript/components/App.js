@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <>
         <Router>
-        <Header/>
+        <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/tripindex" component={TripIndex} />
