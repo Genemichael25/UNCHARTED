@@ -13,6 +13,26 @@ import ExternalResources from "./pages/ExternalResources";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      trips: [],
+      }
+    }
+  
+
+    componentDidMount() {
+      this.readTrip();
+    }
+  
+    readTrip = () => {
+      fetch("/trips")
+      .then((response) => response.json())
+      .then((payload) => this.setState({ trips: payload }))
+      .catch((errors) => console.log("Trip read errors: ", errors))
+    }
+
+
   render() {
     const {
       logged_in,
@@ -29,19 +49,25 @@ class App extends Component {
     return (
       <>
         <Router>
-        <Header/>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/tripindex" component={TripIndex} />
-          <Route path="/tripshow" component={TripShow} />
-          <Route path="/tripnew" component={TripNew} />
-          <Route path="/tripedit" component={TripEdit} />
-          <Route path="/aboutus" component={AboutUs} />
-          <Route path="/externalresources" component={ExternalResources} />
-          <Route component={NotFound} />
-        </Switch>
-        <Footer />
-      </Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/tripindex" component={TripIndex} />
+
+            <Route path="/tripshow/:id" render={(props) =>{
+              let id = +props.match.params.id
+              let trip = this.state.trips.find(trip => trip.id === id)
+              return <TripShow trip={trip} />
+            }}/>
+
+            <Route path="/tripnew" component={TripNew} />
+            <Route path="/tripedit" component={TripEdit} />
+            <Route path="/aboutus" component={AboutUs} />
+            <Route path="/externalresources" component={ExternalResources} />
+            <Route component={NotFound} />
+          </Switch>
+          <Footer />
+        </Router>
       </>
     );
   }
