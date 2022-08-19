@@ -14,6 +14,34 @@ import SevenWonders from "./pages/SevenWonders"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      trips: [],
+    }
+  }
+  componentDidMount() {
+    this.readTrip()
+  }
+  readTrip = () => {
+    fetch("/trips")
+    .then((response) => response.json())
+    .then((payload) => this.setState({ trips: payload }))
+    .catch((errors) => console.log("Trip read errors: ", errors))
+  }
+  updateTrip = (trip, id) => {
+    fetch(`/trips/${id}`, {
+      body: JSON.stringify(trip),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    })
+      .then((response) => response.json())
+      .then(() => this.readTrip())
+      .catch((errors) => console.log("Trip update errors: ", errors))
+  }
+
   render() {
     const {
       logged_in,
@@ -36,7 +64,14 @@ class App extends Component {
           <Route path="/tripindex" component={TripIndex} />
           <Route path="/tripshow" component={TripShow} />
           <Route path="/tripnew" component={TripNew} />
-          <Route path="/tripedit" component={TripEdit} />
+          <Route path="/tripedit/:id"
+            render={(props) => {
+              let id = +props.match.params.id
+              let trip = this.state.trips.find(
+                trip => trip.id === id
+              )
+              return <TripEdit trip={trip} updateTrip={this.updateTrip} />
+            }} />
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/sevenwonders" component={SevenWonders} />
           <Route path="/externalresources" component={ExternalResources} />
@@ -45,7 +80,7 @@ class App extends Component {
         <Footer />
       </Router>
       </>
-    );
+    )
   }
 }
 
