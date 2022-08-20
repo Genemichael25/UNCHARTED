@@ -1,10 +1,16 @@
 class TripsController < ApplicationController
 
     def index
-     trips  = Trip.all 
-     render json: trips
+        trips  = Trip.all 
+        render json: trips
     end 
     
+    def update
+        trip = Trip.find(params[:id])
+        trip.update(trip_params)
+        render json: trip
+    end
+
     def create
         trip = Trip.create(trip_params)
         if trip.valid?
@@ -13,6 +19,7 @@ class TripsController < ApplicationController
             render json: trip.errors, status: 422
         end
     end
+
 
     private
     def trip_params

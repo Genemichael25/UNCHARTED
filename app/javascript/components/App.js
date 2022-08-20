@@ -20,10 +20,10 @@ class App extends Component {
       trips: [],
     }
   }
-  
- componentDidMount() {
-      this.readTrip();
-    }
+
+  componentDidMount() {
+    this.readTrip()
+  }
   
   readTrip = () => {
     fetch("/trips")
@@ -31,6 +31,19 @@ class App extends Component {
     .then((payload) => this.setState({ trips: payload }))
     .catch((errors) => console.log("Trip read errors: ", errors))
   }
+  
+  updateTrip = (trip, id) => {
+    fetch(`/trips/${id}`, {
+      body: JSON.stringify(trip),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    })
+      .then((response) => response.json())
+      .then(() => this.readTrip())
+      .catch((errors) => console.log("Trip update errors: ", errors))
+
 
   createTrip = (newTrip) => {
     fetch("/trips", {
@@ -44,6 +57,7 @@ class App extends Component {
     // .then(() => this.readTrip())
     .then(payload => this.setState({trips: payload}))
     .catch(errors => console.log("New Trip Error", errors))
+
   }
 
 
@@ -68,12 +82,18 @@ class App extends Component {
               let trip = this.state.trips.find(trip => trip.id === id)
               return <TripShow trip={trip} />
             }}/>
+          <Route path="/tripedit/:id"
+            render={(props) => {
+              let id = +props.match.params.id
+              let trip = this.state.trips.find(
+                trip => trip.id === id)
+              return <TripEdit trip={trip} updateTrip={this.updateTrip} />
+            }} />
           <Route path="/tripnew" render={() => 
             <TripNew 
             createTrip={this.createTrip} 
             current_user = {this.props.current_user}/> 
             }/>
-          <Route path="/tripedit" component={TripEdit} />
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/sevenwonders" component={SevenWonders} />
           <Route path="/externalresources" component={ExternalResources} />
@@ -82,7 +102,7 @@ class App extends Component {
         <Footer />
       </Router>
       </>
-    );
+    )
   }
 }
 
