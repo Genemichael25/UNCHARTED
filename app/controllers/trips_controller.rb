@@ -1,5 +1,10 @@
 class TripsController < ApplicationController
 
+    def index
+        trips  = Trip.all 
+        render json: trips
+    end 
+    
     def update
         trip = Trip.find(params[:id])
         trip.update(trip_params)

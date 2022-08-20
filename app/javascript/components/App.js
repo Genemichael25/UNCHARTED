@@ -60,6 +60,7 @@ class App extends Component {
 
   }
 
+
   render() {
     const {
       logged_in,
@@ -76,7 +77,11 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/tripindex" component={TripIndex} />
-          <Route path="/tripshow" component={TripShow} />
+          <Route path="/tripshow/:id" render={(props) =>{
+              let id = +props.match.params.id
+              let trip = this.state.trips.find(trip => trip.id === id)
+              return <TripShow trip={trip} />
+            }}/>
           <Route path="/tripedit/:id"
             render={(props) => {
               let id = +props.match.params.id
