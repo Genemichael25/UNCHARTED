@@ -20,15 +20,18 @@ class App extends Component {
       trips: [],
     }
   }
+
   componentDidMount() {
     this.readTrip()
   }
+  
   readTrip = () => {
     fetch("/trips")
     .then((response) => response.json())
     .then((payload) => this.setState({ trips: payload }))
     .catch((errors) => console.log("Trip read errors: ", errors))
   }
+  
   updateTrip = (trip, id) => {
     fetch(`/trips/${id}`, {
       body: JSON.stringify(trip),
@@ -40,6 +43,21 @@ class App extends Component {
       .then((response) => response.json())
       .then(() => this.readTrip())
       .catch((errors) => console.log("Trip update errors: ", errors))
+
+
+  createTrip = (newTrip) => {
+    fetch("/trips", {
+      body: JSON.stringify(newTrip),
+      headers: {
+        "Content-type": "application/json"
+      },
+      method: "POST"
+    })
+    .then(response => response.json())
+    // .then(() => this.readTrip())
+    .then(payload => this.setState({trips: payload}))
+    .catch(errors => console.log("New Trip Error", errors))
+
   }
 
   render() {
@@ -50,28 +68,27 @@ class App extends Component {
       sign_in_route,
       sign_out_route,
     } = this.props;
-    console.log("logged_in:", logged_in);
-    console.log("current_user:", current_user);
-    console.log("new_user_route:", new_user_route);
-    console.log("sign_in_route:", sign_in_route);
-    console.log("sign_out_route:", sign_out_route);
+   
     return (
       <>
-        <Router>
+      <Router>
         <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/tripindex" component={TripIndex} />
           <Route path="/tripshow" component={TripShow} />
-          <Route path="/tripnew" component={TripNew} />
           <Route path="/tripedit/:id"
             render={(props) => {
               let id = +props.match.params.id
               let trip = this.state.trips.find(
-                trip => trip.id === id
-              )
+                trip => trip.id === id)
               return <TripEdit trip={trip} updateTrip={this.updateTrip} />
             }} />
+          <Route path="/tripnew" render={() => 
+            <TripNew 
+            createTrip={this.createTrip} 
+            current_user = {this.props.current_user}/> 
+            }/>
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/sevenwonders" component={SevenWonders} />
           <Route path="/externalresources" component={ExternalResources} />
