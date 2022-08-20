@@ -1,5 +1,11 @@
 class TripsController < ApplicationController
-    
+
+    def update
+        trip = Trip.find(params[:id])
+        trip.update(trip_params)
+        render json: trip
+    end
+
     def create
         trip = Trip.create(trip_params)
         if trip.valid?
@@ -9,9 +15,9 @@ class TripsController < ApplicationController
         end
     end
 
+
     private
     def trip_params
         params.require(:trip).permit(:name, :location, :from, :to, :travel_buddies, :comments, :image, :user_id)
     end
-
 end
