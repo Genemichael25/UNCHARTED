@@ -20,6 +20,12 @@ class TripsController < ApplicationController
         end
     end
 
+    def destroy
+        trip = Trip.find(params[:id])
+        trip.destroy
+        render json: trip
+    end 
+
 
     private
     def trip_params

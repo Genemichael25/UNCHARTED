@@ -17,9 +17,17 @@ class TripShow extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      success: false
+      success: false,
+      isDeleted: false
     }
   }
+
+handleClick = () => {
+  this.props.deleteTrip(this.props.trip.id)
+  this.setState({ isDeleted: true})
+  console.log("Handle Click")
+}
+
   render() {
     let { trip } = this.props;
     return (
@@ -39,6 +47,11 @@ class TripShow extends Component {
               <NavLink to={`/tripedit/${trip.id}`}>
                 <Button>Update trip</Button>
               </NavLink>
+              <NavLink to={`/tripindex`}>
+              <Button onClick={() => this.props.deleteTrip(trip.id)}>
+                Delete Trip
+              </Button>
+            </NavLink>
             </CardBody>
           </Card>
           }

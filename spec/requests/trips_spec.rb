@@ -26,4 +26,27 @@ RSpec.describe "Trips", type: :request do
       expect(trip['name']).to eq 'Grand Canyon'
     end
   end
+  
+  describe "DELETE /destroy" do
+    it "deletes a trip entry" do
+      trip_params = {
+        trip: {
+          name: 'Grand Canyon',
+          location: 'Arizona',
+          from: 20220504,
+          to: 20220510,
+          travel_buddies: 'Family',
+          comments: 'Birthday getaway for Mom',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/a/aa/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg',
+          
+        }
+      }
+    post "/trips", params: trip_params
+    trip = Trip.first
+    delete "/trips/#{trip.id}"
+    expect(response).to have_http_status(200)
+    trips = Trip.all
+    expect(trips).to be_empty 
+    end
+  end
 end
