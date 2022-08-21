@@ -32,7 +32,6 @@ class TripIndex extends Component {
 											alt="Card image cap"
 										/>
 										<CardTitle className="trip-basic-info">
-											<br></br>
 											{trip.name}
 											<br></br>
 											{trip.location} 
