@@ -35,7 +35,7 @@ class TripIndex extends Component {
 											<br></br>
 											{trip.name}
 											<br></br>
-											{trip.location}
+											{trip.location} 
 											<br></br>
 											Date: {trip.from} to {trip.to}
 											<br></br>

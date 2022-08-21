@@ -64,7 +64,7 @@ class App extends Component {
 									/>
 								);
 							}}
-						/>
+						/> 
 						<Route path="/tripshow" component={TripShow} />
 						<Route path="/tripnew" component={TripNew} />
 						<Route path="/tripedit" component={TripEdit} />
