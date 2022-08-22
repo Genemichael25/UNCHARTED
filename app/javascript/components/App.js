@@ -9,7 +9,7 @@ import TripEdit from "./pages/TripEdit";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import ExternalResources from "./pages/ExternalResources";
-import SevenWonders from "./pages/SevenWonders"
+import SevenWonders from "./pages/SevenWonders";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -43,7 +43,7 @@ class App extends Component {
       .then((response) => response.json())
       .then(() => this.readTrip())
       .catch((errors) => console.log("Trip update errors: ", errors))
-	}
+    }
 
   createTrip = (newTrip) => {
     fetch("/trips", {
@@ -68,8 +68,8 @@ class App extends Component {
       new_user_route,
       sign_in_route,
       sign_out_route,
-    } = this.props;
-	
+    } = this.props
+
     return (
       <>
       <Router>
@@ -77,25 +77,25 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route
-							path="/tripindex"
-							render={(props) => (
-								<TripIndex {...props} trips={this.state.trips} />
-							)}
-						/>
-						<Route
-							path="/mytrips"
-							render={(props) => {
-								let myTrips = this.state.trips.filter(
-									(trip) => trip.user_id === current_user.id
-								);
-								return (
-									<ProtectedTripIndex
-										trips={myListings}
-										deleteTrip={this.deleteTrip}
-									/>
-								);
-							}}
-						/> 
+            path="/tripindex"
+            render={(props) => (
+              <TripIndex {...props} trips={this.state.trips} />
+            )}
+          />
+          <Route
+            path="/mytrips"
+            render={(props) => {
+              let myTrips = this.state.trips.filter(
+                (trip) => trip.user_id === current_user.id
+              )
+              return (
+                <ProtectedTripIndex
+                  trips={myListings}
+                  deleteTrip={this.deleteTrip}
+                />
+              )
+            }}
+          /> 
           <Route path="/tripshow/:id" render={(props) =>{
               let id = +props.match.params.id
               let trip = this.state.trips.find(trip => trip.id === id)
@@ -122,7 +122,7 @@ class App extends Component {
       </Router>
       </>
     )
-	}
+  }
 }
 
-export default App;
+export default App
