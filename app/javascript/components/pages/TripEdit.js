@@ -27,7 +27,7 @@ class TripEdit extends Component {
   }
 
   handleSubmit = () => {
-    this.props.updatedTrip(this.state.updatedTrip, this.props.trip.id)
+    this.props.updateTrip(this.state.updatedTrip, this.props.trip.id)
     this.setState({ submitted: true })
   }
 

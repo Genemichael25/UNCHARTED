@@ -14,12 +14,7 @@ import { NavLink } from "react-router-dom";
 
 
 class TripShow extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      success: false
-    }
-  }
+
   render() {
     let { trip } = this.props;
     return (
@@ -38,6 +33,11 @@ class TripShow extends Component {
               <CardText>{trip.comments}</CardText>
               <NavLink to={`/tripedit/${trip.id}`}>
                 <Button>Update trip</Button>
+              </NavLink>
+              <NavLink to={`/tripindex`}>
+              <Button onClick={() => this.props.deleteTrip(trip.id)}>
+                Delete Trip
+              </Button>
               </NavLink>
             </CardBody>
           </Card>

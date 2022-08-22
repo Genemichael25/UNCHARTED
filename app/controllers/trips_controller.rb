@@ -21,6 +21,12 @@ class TripsController < ApplicationController
         end
     end
 
+    def destroy
+        trip = Trip.find(params[:id])
+        trip.destroy if trip.valid?
+            render json: trip
+    end 
+
 
     private
     def trip_params
