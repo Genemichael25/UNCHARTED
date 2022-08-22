@@ -43,7 +43,7 @@ class App extends Component {
       .then((response) => response.json())
       .then(() => this.readTrip())
       .catch((errors) => console.log("Trip update errors: ", errors))
-
+  }
 
   createTrip = (newTrip) => {
     fetch("/trips", {
@@ -57,7 +57,18 @@ class App extends Component {
     // .then(() => this.readTrip())
     .then(payload => this.setState({trips: payload}))
     .catch(errors => console.log("New Trip Error", errors))
+  }
 
+  deleteTrip = (id) => {
+    fetch (`/trips/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    })
+    .then((response) => response.json())
+    .then(() => this.readTrip())
+    .catch((errors) => console.log("Trip delete errors", errors))
   }
 
 
@@ -76,12 +87,15 @@ class App extends Component {
         <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
+          {logged_in && (
+            <>
           <Route path="/tripindex" component={TripIndex} />
           <Route path="/tripshow/:id" render={(props) =>{
-              let id = +props.match.params.id
-              let trip = this.state.trips.find(trip => trip.id === id)
-              return <TripShow trip={trip} />
-            }}/>
+            let id = +props.match.params.id
+            let trip = this.state.trips.find(trip => trip.id === id)
+            return <TripShow trip={trip} deleteTrip={this.deleteTrip} />
+          }}/>  
+          <Route path={"/tripdelete/id"} />
           <Route path="/tripedit/:id"
             render={(props) => {
               let id = +props.match.params.id
@@ -93,7 +107,7 @@ class App extends Component {
             <TripNew 
             createTrip={this.createTrip} 
             current_user = {this.props.current_user}/> 
-            }/>
+            }/> </> )}
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/sevenwonders" component={SevenWonders} />
           <Route path="/externalresources" component={ExternalResources} />
