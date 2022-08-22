@@ -34,7 +34,7 @@ class TripIndex extends Component {
 										<CardTitle className="trip-basic-info">
 											{trip.name}
 											<br></br>
-											{trip.location} 
+											{trip.location}
 											<br></br>
 											Date: {trip.from} to {trip.to}
 											<br></br>
