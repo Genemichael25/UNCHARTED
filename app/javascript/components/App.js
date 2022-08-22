@@ -87,12 +87,14 @@ class App extends Component {
         <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
+          {logged_in && (
+            <>
           <Route path="/tripindex" component={TripIndex} />
           <Route path="/tripshow/:id" render={(props) =>{
-              let id = +props.match.params.id
-              let trip = this.state.trips.find(trip => trip.id === id)
-              return <TripShow trip={trip} deleteTrip={this.deleteTrip} />
-            }}/>
+            let id = +props.match.params.id
+            let trip = this.state.trips.find(trip => trip.id === id)
+            return <TripShow trip={trip} deleteTrip={this.deleteTrip} />
+          }}/>  
           <Route path={"/tripdelete/id"} />
           <Route path="/tripedit/:id"
             render={(props) => {
@@ -105,7 +107,7 @@ class App extends Component {
             <TripNew 
             createTrip={this.createTrip} 
             current_user = {this.props.current_user}/> 
-            }/>
+            }/> </> )}
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/sevenwonders" component={SevenWonders} />
           <Route path="/externalresources" component={ExternalResources} />

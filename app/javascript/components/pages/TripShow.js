@@ -14,19 +14,6 @@ import { NavLink } from "react-router-dom";
 
 
 class TripShow extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      success: false,
-      isDeleted: false
-    }
-  }
-
-handleClick = () => {
-  this.props.deleteTrip(this.props.trip.id)
-  this.setState({ isDeleted: true})
-  console.log("Handle Click")
-}
 
   render() {
     let { trip } = this.props;
@@ -51,7 +38,7 @@ handleClick = () => {
               <Button onClick={() => this.props.deleteTrip(trip.id)}>
                 Delete Trip
               </Button>
-            </NavLink>
+              </NavLink>
             </CardBody>
           </Card>
           }
