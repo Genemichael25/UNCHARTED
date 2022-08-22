@@ -1,5 +1,6 @@
 class TripsController < ApplicationController
 
+
     def index
         trips  = Trip.all 
         render json: trips
@@ -31,4 +32,5 @@ class TripsController < ApplicationController
     def trip_params
         params.require(:trip).permit(:name, :location, :from, :to, :travel_buddies, :comments, :image, :user_id)
     end
+
 end

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -10,10 +9,11 @@ import TripEdit from "./pages/TripEdit";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import ExternalResources from "./pages/ExternalResources";
-import SevenWonders from "./pages/SevenWonders"
+import SevenWonders from "./pages/SevenWonders";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -79,17 +79,33 @@ class App extends Component {
       new_user_route,
       sign_in_route,
       sign_out_route,
-    } = this.props;
-   
+    } = this.props
+
     return (
       <>
       <Router>
         <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
+
           {logged_in && (
-            <>
-          <Route path="/tripindex" component={TripIndex} />
+          <>
+          <Route
+            path="/tripindex" render={(props) => (
+              <TripIndex {...props} trips={this.state.trips} />
+            )}
+          />
+          <Route
+            path="/mytrips" render={(props) => {
+              let myTrips = this.state.trips.filter(
+                (trip) => trip.user_id === current_user.id)
+              return (
+                <ProtectedTripIndex
+                  trips={myListings}
+                  deleteTrip={this.deleteTrip}
+                />
+              )
+            }}/> 
           <Route path="/tripshow/:id" render={(props) =>{
             let id = +props.match.params.id
             let trip = this.state.trips.find(trip => trip.id === id)
@@ -120,4 +136,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
