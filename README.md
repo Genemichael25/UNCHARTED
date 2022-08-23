@@ -30,6 +30,7 @@ This is a React in Rails application with full CRUD functionality. We used the g
 
 
 ## Dependencies
+- "ruby": "3.0.0"
 - "@babel/preset-react": "^7.18.6",
 - "@rails/activestorage": "^7.0.3-1",
 - "@rails/ujs": "^7.0.3-1",
