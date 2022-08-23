@@ -17,7 +17,10 @@ This is a React in Rails application with full CRUD functionality. We used the g
 2. Cd into the project
 3. Run the following:
 - bundle
+- bundle add bootstrap
 - yarn
+- yarn add reactstrap
+- yarn add react-router-dom@5.3.3
 - rails db:create
 - rails db:migrate
 - rails db:seed
