@@ -79,3 +79,38 @@ h3 {
     font-size: 45px;
 }
 
+.logtriptext{
+    color: #54BAB9;
+    text-align: center;
+}
+
+.name-input , .location-input {
+    width: 400px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.frominput, .toinput {
+    width: 300px;
+    padding-left: 20px;
+}
+
+.travelbuddiesinput {
+    width: 600px;
+    padding: 20px;
+}
+
+.commentsinput, .imageinput {
+    padding: 20px;
+}
+
+Form{
+    background-color: #EAE2D4;
+    margin: 30px;
+}
+
+.namelocation, .groupinputlabel {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
