@@ -138,6 +138,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.8-x86_64-linux)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.4.3)
     popper_js (2.11.5)
@@ -145,8 +147,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
-    rack-cors (1.1.1)
-      rack (>= 2.0.0)
     rack-proxy (0.7.2)
       rack
     rack-test (2.0.2)
@@ -253,6 +253,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -263,7 +264,6 @@ DEPENDENCIES
   jbuilder
   pg (~> 1.1)
   puma (~> 5.0)
-  rack-cors
   rails (~> 7.0.3, >= 7.0.3.1)
   react-rails (~> 2.6)
   rspec-rails (~> 5.1)

@@ -12,6 +12,7 @@ import {
   DropdownItem,
 } from "reactstrap"
 
+
 class Header extends React.Component {
   constructor(props) {
     super(props)
@@ -69,7 +70,7 @@ class Header extends React.Component {
                       <a href="/tripnew"> Log Trip</a>
                     </DropdownItem>
                     <DropdownItem>
-                      <a href="/tripindex"> View Trip</a>
+                      <a href="/tripindex"> View Trips</a>
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>

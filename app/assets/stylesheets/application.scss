@@ -34,9 +34,25 @@ a {
 .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
     color: #E9DAC1
 }
-
-
-
-
-
  
+footer {
+    background-color: #54BAB9;
+    height: 10vh;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    bottom: 0;
+    width: 100%;
+}
+
+.about-us {
+    padding-right: 100px;
+    color: white;
+}
+
+.externalresources {
+    padding-left: 100px;
+    color:white;
+}
+
