@@ -1,17 +1,50 @@
 @import 'bootstrap';
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+
+
+// ____Home-js______
+// .home-title {
+//     src:'https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap';
+//     font-family: 'Fredericka the Great', cursive;
+// }
+
+
+// ___Navbar-Header____
+.navbar-back{
+    background-color: #54BAB9!important;
+}
+.navbar-title {
+    font-family: 'Fredericka the Great', cursive;
+    color: #F7ECDE;
+    font-size: 60px
+}
+:hover .navbar-title {
+    color: #F7ECDE;
+}
+.collapse-navbar-collapse {
+    background-color: #F7ECDE;
+}
+.nav-link {
+    color: #F7ECDE;
+    font-size:18px
+}
+.nav-link:hover {
+    color: #F7ECDE;
+}
+.nav-link::after {
+    color: #F7ECDE;
+}
+a {
+    color: #54BAB9;
+    text-decoration: none;
+}
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
+    color: #E9DAC1
+}
+
+
+
+
+
  

@@ -38,11 +38,11 @@ class Header extends React.Component {
     console.log("current_user:", current_user)
     return (
       <>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">UNCHARTED</NavbarBrand>
+        <Navbar className="navbar-back" color="light" light expand="md">
+          <NavbarBrand className="navbar-title" href="/">UNCHARTED</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav className="ms-auto" navbar>
               {/* ____________________logged out user________________________ */}
               {!logged_in && (
                 <NavItem>
@@ -64,8 +64,8 @@ class Header extends React.Component {
                   <DropdownToggle nav caret>
                     My Trips
                   </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>
+                  <DropdownMenu className="collapse-navbar-collapse" right>
+                    <DropdownItem className="topnav-right">
                       <a href="/tripnew"> Log Trip</a>
                     </DropdownItem>
                     <DropdownItem>
