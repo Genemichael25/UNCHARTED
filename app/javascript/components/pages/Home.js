@@ -5,7 +5,7 @@ import { Button } from "reactstrap";
 class Home extends Component {
   render() {
     return <>
-            <h1>
+            <h1 className="home-title">
               UNCHARTED
             </h1>
              <p> 
