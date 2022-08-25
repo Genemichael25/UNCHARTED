@@ -77,8 +77,9 @@ footer {
 
 h3 {
     font-size: 45px;
+    text-align: center;
 }
-
+// ______LogTrip-Page_____
 .logtriptext{
     color: #54BAB9;
     text-align: center;
@@ -113,4 +114,45 @@ Form{
     display: flex;
     flex-direction: row;
     padding: 5px;
+}
+
+// ______ShowTripCard_____
+.trip-image {
+    height: 300px;
+    width: 400px;
+}
+
+.trip-detail-body {
+    width: 400px;
+    background-color: white;
+}
+
+.showcard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7ECDE;
+}
+
+.nameofplace {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+// ______SevenWonders-Page_____
+.sevencard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 15px;
+}
+
+.sevenpic {
+    height: 180px;
+    width: auto;
+}
+
+.sevenwondersbody {
+    background-color: #e4e2e2;
 }
