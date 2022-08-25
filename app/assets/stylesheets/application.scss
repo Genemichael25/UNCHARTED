@@ -1,4 +1,5 @@
 @import 'bootstrap';
+
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Yantramanav&display=swap');
@@ -64,4 +65,119 @@
 .aboutus-LinkedIn-icon {
   margin-bottom: 10;
   margin-right: 10;
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+
+// ______Navbar-Header_____
+.navbar-back{
+    background-color: #54BAB9!important;
+}
+.navbar-title {
+    font-family: 'Fredericka the Great', cursive;
+    color: #F7ECDE;
+    font-size: 60px
+}
+:hover .navbar-title {
+    color: #F7ECDE;
+}
+.collapse-navbar-collapse {
+    background-color: #F7ECDE;
+}
+.nav-link {
+    color: #F7ECDE;
+    font-size:18px
+}
+.nav-link:hover {
+    color: #F7ECDE;
+}
+.nav-link::after {
+    color: #F7ECDE;
+}
+a {
+    color: #54BAB9;
+    text-decoration: none;
+}
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
+    color: #E9DAC1
+}
+ 
+footer {
+    background-color: #54BAB9;
+    height: 10vh;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    bottom: 0;
+    width: 100%;
+}
+
+.about-us {
+    padding-right: 100px;
+    color: white;
+}
+
+.externalresources {
+    padding-left: 100px;
+    color:white;
+}
+
+.notfound {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    border-style: double;
+    border-width: 7px;
+    border-color: #EAE2D4;
+    font-size: 25px;
+    width: 550px;
+  }
+
+h3 {
+    font-size: 45px;
+}
+
+.logtriptext{
+    color: #54BAB9;
+    text-align: center;
+}
+
+.name-input , .location-input {
+    width: 400px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.frominput, .toinput {
+    width: 300px;
+    padding-left: 20px;
+}
+
+.travelbuddiesinput {
+    width: 600px;
+    padding: 20px;
+}
+
+.commentsinput, .imageinput {
+    padding: 20px;
+}
+
+Form{
+    background-color: #EAE2D4;
+    margin: 30px;
+}
+
+.namelocation, .groupinputlabel {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
 }
