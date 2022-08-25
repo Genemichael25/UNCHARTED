@@ -4,7 +4,8 @@ import { Button } from "reactstrap";
 
 class Home extends Component {
   render() {
-    return <>
+    return
+    <>
       <div className="middlebar">
         <div className="box">
           <img src="assets/vintage.webp" />
@@ -27,6 +28,7 @@ class Home extends Component {
         </div>
       </div>
     </>
+
   }
 }
 

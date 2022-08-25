@@ -6,13 +6,11 @@ class Footer extends Component {
     return (
       <>
         <footer>
-          <NavLink to={`/aboutus`}>
+          <NavLink className={"about-us"} to={`/aboutus`}>
             About Us
           </NavLink>
-          <div className="org-footer">
             ©Uncharted 2022 | Code Empire
-          </div>
-          <NavLink to={`/externalresources`}>
+          <NavLink className={"externalresources"} to={`/externalresources`}>
             External Resources
           </NavLink>
         </footer>
@@ -22,3 +20,5 @@ class Footer extends Component {
 }
 
 export default Footer
+          
+          
