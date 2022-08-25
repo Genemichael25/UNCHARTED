@@ -33,70 +33,91 @@ class TripEdit extends Component {
 
   render() {
     return (
-      <>
+<>
+       <h3 className="logtriptext">Edit Trip</h3>
         <Form>
-          <FormGroup>
-            <Label for="name">Name</Label>
+        <div className="namelocation">
+          <FormGroup className="name-input">
+            <div className="groupinputlabel">
+            <Label for="name">Name:</Label>
             <Input
               type="text"
               name="name"
               onChange={this.handleChange}
               value={this.state.updatedTrip.name}
             />
+            </div>
           </FormGroup>
-          <FormGroup>
-            <Label for="location">Location</Label>
+          <FormGroup className="location-input">
+            <div className="groupinputlabel">
+            <Label for="location">Location:</Label>
             <Input
               type="text"
               name="location"
               onChange={this.handleChange}
               value={this.state.updatedTrip.location}
             />
+            </div>
           </FormGroup>
-          <FormGroup>
-            <Label for="from">From</Label>
-            <Input
-              type="text"
-              name="from"
+         </div>
+         <div className="namelocation"> 
+          <FormGroup className="frominput">
+            <div className="groupinputlabel">
+            <Label for="fromDate">From:</Label>
+            <Input 
+              type="date" 
+              name="from" 
+              id="fromDate"  
               onChange={this.handleChange}
               value={this.state.updatedTrip.from}
-            />
+              />
+            </div>
           </FormGroup>
-          <FormGroup>
-            <Label for="to">To</Label>
-            <Input
-              type="text"
-              name="to"
+          <FormGroup className="toinput">
+            <div className="groupinputlabel">
+            <Label for="to">To:</Label>
+            <Input 
+              type="date" 
+              name="to" 
+              id="toDate"  
               onChange={this.handleChange}
               value={this.state.updatedTrip.to}
-            />
+              />
+            </div>
           </FormGroup>
-          <FormGroup>
-            <Label for="travel_buddies">Travel Buddies</Label>
+        </div>
+          <FormGroup className="travelbuddiesinput">
+            <div className="groupinputlabel">
+            <Label for="travel_buddies">Travel Buddies:</Label>
             <Input
               type="text"
               name="travel_buddies"
               onChange={this.handleChange}
               value={this.state.updatedTrip.travel_buddies}
             />
+            </div>
           </FormGroup>
-          <FormGroup>
-            <Label for="comments">Comments</Label>
+          <FormGroup className="commentsinput">
+            <div className="groupinputlabel">
+            <Label for="comments">Comments:</Label>
             <Input
-              type="text"
+              type="textarea"
               name="comments"
               onChange={this.handleChange}
               value={this.state.updatedTrip.comments}
             />
+            </div>
           </FormGroup>
-          <FormGroup>
-            <Label for="image">Image</Label>
+          <FormGroup className="imageinput">
+            <div className="groupinputlabel">
+            <Label for="image">Image:</Label>
             <Input
               type="text"
               name="image"
               onChange={this.handleChange}
               value={this.state.updatedTrip.image}
             />
+            </div>
           </FormGroup>
           <Button name="submit" onClick={this.handleSubmit}>
             Update Trip

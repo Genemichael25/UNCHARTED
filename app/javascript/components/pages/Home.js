@@ -19,7 +19,7 @@ class Home extends Component {
             </p>
           </div>
           <br />
-          < div className="button">
+          <div className="button">
             <Button>
               <NavLink to={"/sevenwonders/"}>
                 Need Inspiration?
@@ -32,4 +32,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Home
