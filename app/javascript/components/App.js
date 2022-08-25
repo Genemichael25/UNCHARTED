@@ -82,8 +82,8 @@ class App extends Component {
 
     return (
       <>
-      <Header {...this.props} />
       <Router>
+      <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
           
@@ -91,9 +91,12 @@ class App extends Component {
           <>
           <Switch>
             <Route
-              exact path="/tripindex" render={(props) => (
-                <TripIndex {...props} trips={this.state.trips} />
-              )}
+              exact path="/tripindex" render={(props) => {
+                let myTrips = this.state.trips.filter(
+                  (trip) => trip.user_id === current_user.id)
+                return (
+                <TripIndex {...props} trips={myTrips} />)
+              }}
             />
             <Route exact path="/tripshow/:id" render={(props) =>{
               let id = +props.match.params.id
@@ -126,8 +129,8 @@ class App extends Component {
           <Route exact path="/externalresources" component={ExternalResources} />
           <Route component={NotFound} />
         </Switch>
-      </Router>
       <Footer />
+      </Router>
       </>
     )
   }
