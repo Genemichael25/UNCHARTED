@@ -1,5 +1,4 @@
 @import 'bootstrap';
-
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Yantramanav&display=swap');
@@ -65,7 +64,7 @@
 .aboutus-LinkedIn-icon {
   margin-bottom: 10;
   margin-right: 10;
-
+}
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 
@@ -144,8 +143,9 @@ footer {
 
 h3 {
     font-size: 45px;
+    text-align: center;
 }
-
+// ______LogTrip-Page_____
 .logtriptext{
     color: #54BAB9;
     text-align: center;
@@ -181,6 +181,46 @@ Form{
     flex-direction: row;
     padding: 5px;
 }
+
+// ______ShowTripCard_____
+.trip-image {
+    height: 300px;
+    width: 400px;
+}
+
+.trip-detail-body {
+    width: 400px;
+    background-color: white;
+}
+
+.showcard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7ECDE;
+}
+
+.nameofplace {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+// ______SevenWonders-Page_____
+.sevencard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 15px;
+}
+
+.sevenpic {
+    height: 180px;
+    width: auto;
+}
+
+.sevenwondersbody {
+    background-color: #e4e2e2;
 
 .middlebar img {
   width: 1300px;
