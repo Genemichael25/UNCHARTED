@@ -114,3 +114,51 @@ Form{
     flex-direction: row;
     padding: 5px;
 }
+
+.middlebar img {
+  width: 1300px;
+  height: auto;
+  position: relative;
+}
+
+.box {
+  text-align: center;
+}
+
+.title {
+  position: absolute;
+  text-align: center;
+  right: 61%;
+  top: 20%;
+  width: 50%;
+  transform: translate(33%);
+  color: rgb(15, 14, 14);
+  font-weight: bold;
+}
+
+.text {
+  position: absolute;
+  text-align: center;
+  right: 61%;
+  top: 30%;
+  width: 50%;
+  transform: translate(33%);
+  color: rgb(15, 14, 14);
+  background: #f7ecde54;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.25s;
+  font-size:large;
+}
+.text:hover {
+  opacity: 1;
+}
+.text--blur {
+  backdrop-filter: blur(10px);
+}
+.middlebar p {
+  text-align: center;
+}
+.button {
+  text-align: center;
+}
