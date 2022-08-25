@@ -1,4 +1,71 @@
 @import 'bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Yantramanav&display=swap');
+
+
+
+ // _____"ABOUT US" Styling_____
+
+.aboutus-logo {
+  position: relative;
+  width: 30%;
+  height: 30%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0%)
+}
+
+.aboutus-card {
+  position: relative; 
+  align-items: center; 
+  background-color: #F7ECDE;
+}
+
+//__Formats Member Name/Role Location__
+.aboutus-title {
+  text-align: center;
+  font-size: larger;
+}
+
+//__Formats Member Name Styling__
+#capstone-team-member {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+//__Formats Member Role Styling__
+#capstone-role {
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+}
+
+//__Formats Bio Text__
+.aboutus-text {
+  text-align: justify;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50;
+  font-size: 18.5px;
+  font-family: 'Yantramanav', sans-serif;
+  
+}
+.aboutus-bio-pic {
+  position:relative;
+  width: 100%; 
+  clip-path: circle() ;
+}
+
+.aboutus-GitHub-icon {
+  margin-bottom: 10;
+  margin-right: 10;
+}
+
+.aboutus-LinkedIn-icon {
+  margin-bottom: 10;
+  margin-right: 10;
+
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 
