@@ -1,18 +1,17 @@
 import React, { Component } from "react"
-import { NavLink } from 'react-router-dom'
 
 class Footer extends Component {
   render() {
     return (
       <>
         <footer>
-          <NavLink className={"about-us"} to={`/aboutus`}>
+          <a className={"about-us"} href={`/aboutus`}>
             About Us
-          </NavLink>
+          </a>
             ©Uncharted 2022 | Code Empire
-          <NavLink className={"externalresources"} to={`/externalresources`}>
+          <a className={"externalresources"} href={`/externalresources`}>
             External Resources
-          </NavLink>
+          </a>
         </footer>
       </>
     )

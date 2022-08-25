@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import ExternalResources from "./pages/ExternalResources";
 import SevenWonders from "./pages/SevenWonders";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
 
 class App extends Component {
 
@@ -54,8 +54,7 @@ class App extends Component {
       method: "POST"
     })
     .then(response => response.json())
-    // .then(() => this.readTrip())
-    .then(payload => this.setState({trips: payload}))
+    .then(() => this.readTrip())
     .catch(errors => console.log("New Trip Error", errors))
   }
 
@@ -83,54 +82,52 @@ class App extends Component {
 
     return (
       <>
+      <Header {...this.props} />
       <Router>
-        <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
-
+          
           {logged_in && (
           <>
-          <Route
-            path="/tripindex" render={(props) => (
-              <TripIndex {...props} trips={this.state.trips} />
-            )}
-          />
-          <Route
-            path="/mytrips" render={(props) => {
-              let myTrips = this.state.trips.filter(
-                (trip) => trip.user_id === current_user.id)
-              return (
-                <ProtectedTripIndex
-                  trips={myListings}
-                  deleteTrip={this.deleteTrip}
-                />
-              )
-            }}/> 
-          <Route path="/tripshow/:id" render={(props) =>{
-            let id = +props.match.params.id
-            let trip = this.state.trips.find(trip => trip.id === id)
-            return <TripShow trip={trip} deleteTrip={this.deleteTrip} />
-          }}/>  
-          <Route path={"/tripdelete/id"} />
-          <Route path="/tripedit/:id"
-            render={(props) => {
+          <Switch>
+            <Route
+              exact path="/tripindex" render={(props) => (
+                <TripIndex {...props} trips={this.state.trips} />
+              )}
+            />
+            <Route exact path="/tripshow/:id" render={(props) =>{
               let id = +props.match.params.id
-              let trip = this.state.trips.find(
-                trip => trip.id === id)
-              return <TripEdit trip={trip} updateTrip={this.updateTrip} />
-            }} />
-          <Route path="/tripnew" render={() => 
-            <TripNew 
-            createTrip={this.createTrip} 
-            current_user = {this.props.current_user}/> 
-            }/> </> )}
-          <Route path="/aboutus" component={AboutUs} />
-          <Route path="/sevenwonders" component={SevenWonders} />
-          <Route path="/externalresources" component={ExternalResources} />
+              let trip = this.state.trips.find(trip => trip.id === id)
+              return <TripShow trip={trip} deleteTrip={this.deleteTrip} />
+            }}/>  
+            <Route exact path ={"/tripdelete/id"} />
+            <Route exact path="/tripedit/:id"
+              render={(props) => {
+                let id = +props.match.params.id
+                let trip = this.state.trips.find(
+                  trip => trip.id === id)
+                return <TripEdit trip={trip} updateTrip={this.updateTrip} />
+              }} />
+            <Route exact path="/tripnew" render={() => 
+              <TripNew 
+              createTrip={this.createTrip} 
+              current_user = {this.props.current_user}/> 
+              }/> 
+            <Route exact path="/aboutus" component={AboutUs} />
+            <Route exact path="/sevenwonders" component={SevenWonders} />
+            <Route exact path="/externalresources" component={ExternalResources} />  
+            <Route component={NotFound} />
+           </Switch>
+          </> 
+           )} 
+
+          <Route exact path="/aboutus" component={AboutUs} />
+          <Route exact path="/sevenwonders" component={SevenWonders} />
+          <Route exact path="/externalresources" component={ExternalResources} />
           <Route component={NotFound} />
         </Switch>
-        <Footer />
       </Router>
+      <Footer />
       </>
     )
   }

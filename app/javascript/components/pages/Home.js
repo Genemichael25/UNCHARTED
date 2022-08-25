@@ -4,7 +4,7 @@ import { Button } from "reactstrap";
 
 class Home extends Component {
   render() {
-    return
+    return (
     <>
       <div className="middlebar">
         <div className="box">
@@ -28,7 +28,7 @@ class Home extends Component {
         </div>
       </div>
     </>
-
+  )
   }
 }
 
