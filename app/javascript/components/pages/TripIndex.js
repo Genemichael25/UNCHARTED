@@ -1,38 +1,57 @@
 import React, { Component } from "react";
-import { Button, Card, CardTitle, Col, Row, CardImg, Container } from "reactstrap";
+import { Button, Card, CardTitle, Col, Row, CardImg, Container, Grid } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
 class TripIndex extends Component {
 render() {
   return (
   <>
+  <div class="body"> 
     <Container className="indexText">
-      <h3>Review My Trips</h3>
-      <p>List of all my destinations!</p>
+      <h3 id="index-title-text">
+        My Adventures
+      </h3>
+      <p id="index-subtitle-text">
+        Everywhere I've been...
+      </p>
     </Container>
     <Row className="trips-row">
       {this.props.trips &&
         this.props.trips.map((trip) => {
           return (
-            <Col key={trip.id} sm="4">
-              <Card className="trip-tile" body>
-                <CardImg
+            <Col 
+            key={trip.id} 
+            sm="4" 
+            className="col-lg-4 d-flex align-items-stretch"
+            >
+              <Card className="trip-title" body>
+                <CardImg 
+                  id="index-card-images"
                   top
                   width="100%"
                   src={trip.image}
                   alt="Card image cap"
                 />
                 <CardTitle className="trip-basic-info">
+                  <div className="nameofplace">
                   {trip.name}
                   <br></br>
+                  </div>
+                  <div className="location-text">
                   {trip.location}
-                  <br></br>
-                  Date: {trip.from} to {trip.to}
+                  </div>
+                  <div className="date-text"> 
+                  <hr></hr>
+                    Date: {trip.from} to {trip.to}
+                  </div>
                   <br></br>
                   <p>
-                    <NavLink to={`/tripshow/${trip.id}`}>
-                      <Button className="s-button">More Details</Button>
+                    <div class="col-md-12 text-center"> 
+                    <NavLink 
+                      to={`/tripshow/${trip.id}`}>
+                      <Button href="#" className="s-button">More Details</Button>
                     </NavLink>
+                    </div>
                   </p>
                 </CardTitle>
               </Card>
@@ -40,6 +59,7 @@ render() {
           )
         })}
     </Row>
+    </div>
   </>
 )
 }

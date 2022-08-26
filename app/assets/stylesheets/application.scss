@@ -38,6 +38,7 @@
 #capstone-role {
   font-family: 'Indie Flower', cursive;
   font-weight: bold;
+  font-size: 30px;
 }
 
 //__Formats Bio Text__
@@ -65,6 +66,7 @@
 .aboutus-LinkedIn-icon {
   margin-bottom: 10;
   margin-right: 10;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
@@ -83,10 +85,11 @@
 }
 .collapse-navbar-collapse {
     background-color: #F7ECDE;
+    font-size: 26px
 }
 .nav-link {
     color: #F7ECDE;
-    font-size:18px
+    font-size:26px
 }
 .nav-link:hover {
     color: #F7ECDE;
@@ -101,7 +104,9 @@ a {
 .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
     color: #E9DAC1
 }
- 
+
+// ______Navbar-Footer_____
+
 footer {
     background-color: #54BAB9;
     height: 10vh;
@@ -182,32 +187,40 @@ Form{
     padding: 5px;
 }
 
-.middlebar img {
-  width: 1300px;
-  height: auto;
-  position: relative;
-}
+//___Home Page___
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Carter+One&family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,500&display=swap');
 
+
+
+#homepage-img-background {
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100;
+}
 .box {
   text-align: center;
+  margin-bottom: 70;
 }
 
-.title {
-  position: absolute;
-  text-align: center;
-  right: 61%;
-  top: 20%;
-  width: 50%;
-  transform: translate(33%);
-  color: rgb(15, 14, 14);
-  font-weight: bold;
+#homepage-overview-text-styling {
+font-size: 23.8px;
+text-align: justify;
+display: flex;
+justify-content: space-around;
+text-align: center;
+font-family: 'Archivo', sans-serif;
 }
 
 .text {
   position: absolute;
   text-align: center;
-  right: 61%;
-  top: 30%;
+  right: 60%;
+  top: 45%;
   width: 50%;
   transform: translate(33%);
   color: rgb(15, 14, 14);
@@ -215,17 +228,144 @@ Form{
   font-weight: bold;
   opacity: 0;
   transition: 0.25s;
-  font-size:large;
 }
+
 .text:hover {
   opacity: 1;
 }
 .text--blur {
   backdrop-filter: blur(10px);
 }
-.middlebar p {
+
+.button {
+  margin-bottom: 90!important;
+  top: 90%;
+  bottom: 50%;
+  right: 35%
+}
+
+#button-style{
+  background-color: #2B4865; 
+  border-color: #002B5B;
+  padding: 15px 32px;
+  position: absolute;
+  top: 91%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.button-text {
+  color: white;
+  font-size: 33px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 82vh
+}
+
+h1 span {
+  font-size: 70px;
+  font-weight: bolder;
+  font-family: 'Gloria Hallelujah', cursive;
+  letter-spacing: -1px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  right: 56%;
+  top: 12%;
+  width: 50%;
+  transform: translate(33%);
+  color: rgb(15, 14, 14);
+}
+
+h1 span.spacer {
+  padding: 0 5px;
+}
+
+
+// _______Trip Index_________
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.indexText {
+  position: relative;
   text-align: center;
 }
-.button {
+
+#index-title-text {
+  font-size: 55px;
+  font-family: 'DynaPuff', cursive;
+}
+
+#index-subtitle-text {
+  font-size: 35px; 
+  font-family: 'Shadows Into Light', cursive;
+}
+// _Index Page Background_
+.body {
+  background-color:#F7ECDE;
+  height: 90vh;
+}
+
+.trip-title {
+  margin: 40px;
+  margin-bottom: 130px;
+  padding-bottom: 100 !important;
+}
+
+.nameofplace {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: 'Archivo', sans-serif;
+}
+
+.location-text {
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+.date-text {
+  font-size: 19px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#index-card-images {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 55
+}
+
+.s-button {
+  background-color: grey;
+  border-color: grey;
+  padding: 15px 32px;
+  margin: 8;
+  margin-left: 0%;
+  font-size: 25px;
+  font-weight: bold;
+  float: center;
+  position: sticky;
+  justify-content: center; 
+  align-self: stretch;
+  align-content:center;
   text-align: center;
+  display: flex;
+  font-family: 'BioRhyme', serif;
+}
+
+* {
+  margin:0; 
+  padding: 0 
 }
