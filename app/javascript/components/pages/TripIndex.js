@@ -65,4 +65,4 @@ render() {
     )
   }
 }
-export default TripIndex;
+export default TripIndex
