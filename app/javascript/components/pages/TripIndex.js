@@ -29,7 +29,7 @@ render() {
                       top
                       width="100%"
                       src={trip.image}
-                      alt="Card image cap"
+                      alt="Card image Cap"
                     />
                     <CardTitle className="trip-basic-info">
                       <div className="nameofplace">
