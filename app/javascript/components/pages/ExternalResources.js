@@ -25,9 +25,6 @@ class ExternalResources extends React.Component {
         <div className='resource-title'>
         <h2>Making traveling simple and more affordable!</h2>
         </div>
-        {/* <div className='sub-title'>
-         <h4>Making traveling simple and more affordable today!</h4>
-         </div> */}
         <Nav tabs>
           <NavItem>
             <NavLink
@@ -88,7 +85,7 @@ class ExternalResources extends React.Component {
                 id="cheapoairLink" 
                 href="https://www.cheapoair.com"        
                 target="_blank">
-                  cheapOair
+                  CheapOair
               </a>
             </li>
             <li>
@@ -144,7 +141,7 @@ class ExternalResources extends React.Component {
                 id="airbnbLink" 
                 href="https://www.airbnb.com"        
                 target="_blank">
-                  airbnb
+                  Airbnb
               </a>
             </li>
             <li>
@@ -192,7 +189,7 @@ class ExternalResources extends React.Component {
               <Col sm="12">
                 <div className='helpful-logo'>
                 <div className='mini-header'>
-                <h4>Help Yourself To...</h4>
+                <h4>Help yourself to...</h4>
                 </div>
                 <ul>
             <li>

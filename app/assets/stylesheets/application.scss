@@ -92,7 +92,7 @@
 }
 .nav-link {
      color: white;
-    font-size:26px
+     font-size:26px
 }
 .nav-link:hover {
     color: #002B5B;
@@ -103,6 +103,8 @@
 a {
     color: white;
     text-decoration: none;
+    font-family: 'Fredericka the Great', cursive;
+
 }
 .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
     color: #E9DAC1
@@ -112,50 +114,41 @@ a {
 
 .resource-title {
     color: black;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Gloria Hallelujah', cursive;
     font-weight: bolder;
     background-color: white;
     padding: 3px;
     text-align: center;
-    opacity: 0.61;
-    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-}
-.sub-title {
-    color: black;
-    font-weight: bolder;
-    font-family: 'Titillium Web', sans-serif;
-    background-color: white;
-    padding: 3px;
-    text-align: center;
-    opacity: 0.61;
-    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .transportation-logo {
     background-image: url('https://wallpaperaccess.com/full/5931192.jpg');
     background-size: 100%!important;
     width: 100vw;
     height: 100vh;
-    font-size:24px;
+    font-size:27px;
     background-repeat:no-repeat;
-    font-weight: bold;
+    font-weight: bold!important;
+    font-family: 'DynaPuff', cursive
 }
 .hotel-logo {
     background-image: url('https://wallpaperaccess.com/full/1191990.jpg');
     background-size: 100%!important;
     width: 100vw;
     height: 100vh;
-    font-size:24px;
+    font-size:27px;
     background-repeat:no-repeat;
     font-weight: bold;
+    font-family: 'DynaPuff', cursive
 }
 .helpful-logo {
     background-image: linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(10, 161, 243, 0.73)), url('https://images.reference.com/reference-production-images/question/aq/role-tour-guide_5ee3912ff215781a.jpg?width=760&height=411&fit=crop');
     background-size: 100%!important;
     width: 100vw;
     height: 100vh;
-    font-size:24px;
+    font-size:27px;
     background-repeat:no-repeat;  
     font-weight: bold;
+    font-family: 'DynaPuff', cursive
 }
 .nav-tabs {
     --bs-nav-tabs-border-width: 1px;
@@ -170,9 +163,10 @@ a {
     font-weight: bold;
 }
 .mini-header {
-    font-family: 'Yantramanav', sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
     font-weight: bolder;
-    color: white
+    color: white;
+    text-decoration: underline;
 }
 ::marker {
     unicode-bidi: isolate;
@@ -187,7 +181,6 @@ a {
     font-family: 'Yantramanav', sans-serif;
     font-weight: bolder;
 }
-
 
 // _____Footer______ 
 
