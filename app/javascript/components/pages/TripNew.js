@@ -125,7 +125,8 @@ class TripNew extends Component {
             />
             </div>
           </FormGroup>
-          <Button
+          <Button 
+            className="submit-edit-button"
             name="submit"
             onClick={this.handleSubmit}
             style={{marginLeft: "48%", marginBottom:"10px"}}

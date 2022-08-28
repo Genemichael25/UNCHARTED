@@ -17,7 +17,8 @@ class TripShow extends Component {
       <>
         <div>
           {trip && (
-            <Card className="showcard">
+            <Card 
+              className="showcard">
               <CardImg
                 className="trip-image"
                 src={trip.image}
@@ -25,23 +26,27 @@ class TripShow extends Component {
               />
               <CardBody className="trip-detail-body">
                 <CardTitle className="nameofplace">{trip.name}</CardTitle>
-                <CardSubtitle>{trip.location}</CardSubtitle>
+                <CardSubtitle id="location-text">
+                  {trip.location}               
+                </CardSubtitle>
                 <hr></hr>
-                <CardText>
+                <CardText id="show-date-text">
                   Dates: {trip.from} to {trip.to}
                 </CardText>
-                <CardText>
+                <CardText id="travelbuddies-text">
                   Travel Buddies: {trip.travel_buddies}
                 </CardText>
-                <CardText>{trip.comments}</CardText>
+                <CardText id="comments-text">{trip.comments}</CardText>
                 <NavLink to={`/tripedit/${trip.id}`}>
                   <Button 
+                    className="show-button"
                     style={{ marginLeft: "15%" }}>
                       Edit Trip
                   </Button>
                 </NavLink>
                 <NavLink to={`/tripindex`}>
                   <Button
+                    className="show-button"
                     onClick={() => this.props.deleteTrip(trip.id)}
                     style={{ marginLeft: "20%" }}
                   >
