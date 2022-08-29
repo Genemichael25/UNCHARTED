@@ -87,12 +87,14 @@
     color: white;
 }
 .collapse-navbar-collapse {
-    background-color: #F7ECDE;
-    font-size: 26px
+    background-color: #E9DAC1;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 .nav-link {
      color: white;
-     font-size:26px
+     font-size:26px;
 }
 .nav-link:hover {
     color: #002B5B;
@@ -114,11 +116,13 @@ a {
 
 .resource-title {
     color: black;
-    font-family: 'Gloria Hallelujah', cursive;
     font-weight: bolder;
     background-color: white;
     padding: 3px;
     text-align: center;
+    opacity: 0.61;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 .transportation-logo {
     background-image: url('https://wallpaperaccess.com/full/5931192.jpg');
@@ -211,8 +215,10 @@ footer {
     position: relative;
     text-align: center;
     color: white;
+    
   }
- .centered {
+
+  .centered {
     position: absolute;
     top: 30%;
     left: 50%;
@@ -229,11 +235,12 @@ h3 {
     text-align: center;
 }
 
-// ______LogTrip-Page_____
+// ______LogTrip-Page & Edit Page_____
 
 .logtriptext{
     color: #54BAB9;
     text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .name-input , .location-input {
@@ -259,12 +266,21 @@ h3 {
 Form{
     background-color: #EAE2D4;
     margin: 30px;
+    padding: 40px;
+    padding-bottom: 175px
 }
 
 .namelocation, .groupinputlabel {
     display: flex;
     flex-direction: row;
     padding: 5px;
+}
+
+.submit-edit-button {
+  background-color: #2B4865;
+  border-color: #002B5B;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 24px;
 }
 
 // ______ShowTripCard_____
@@ -277,20 +293,54 @@ Form{
 .trip-detail-body {
     width: 400px;
     background-color: white;
+    height: 53vh;
+    position: center;
 }
 
-.showcard {
+.show-card {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #F7ECDE;
 }
 
-.nameofplace {
+.name-of-place {
     font-weight: bold;
     font-size: 20px;
 }
 
+#location-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+#show-date-text{
+  font-size: 17px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#travel-buddies-text {
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#comments-text {
+  font-size: 18px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.show-button{
+font-size: 18px;
+color: white; 
+position: relative; 
+top: 30%;
+right: 6%;
+background-color: #2B4865;
+border-color: #002B5B;
+font-family: 'Gloria Hallelujah', cursive;
+
+
+}
 // ______SevenWonders-Page_____
 
 .sevencard {
@@ -471,7 +521,7 @@ h1 span.spacer {
 
 #index-title-text {
   font-size: 55px;
-  font-family: 'DynaPuff', cursive;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 #index-subtitle-text {
@@ -482,7 +532,7 @@ h1 span.spacer {
 // _Index Page Background_
 .body {
   background-color:#F7ECDE;
-  height: 90vh;
+  height: 100vh;
 }
 
 .trip-title {
@@ -514,8 +564,9 @@ h1 span.spacer {
 }
 
 .s-button {
-  background-color: grey;
-  border-color: grey;
+  background-color: #2B4865;
+  border-color: #002B5B;
+  font-family: 'Gloria Hallelujah', cursive;
   padding: 15px 32px;
   margin: 8;
   margin-left: 0%;
@@ -528,7 +579,6 @@ h1 span.spacer {
   align-content:center;
   text-align: center;
   display: flex;
-  font-family: 'BioRhyme', serif;
 }
 
 * {
