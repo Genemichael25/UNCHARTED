@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Yantramanav&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 
  // _____"ABOUT US" Styling_____
@@ -425,6 +425,49 @@ h1 span.spacer {
   text-align: center;
 }
 
+//_______Random Trip____________
+
+.randomtrip {
+  position:relative;
+  text-align: center;
+  color: white;
+}
+
+.randomtripimage {
+  width: 750px;
+  height: 500px;
+  opacity: 95%;
+  border-style: inset;
+  border-width: 4px;
+  border-color: black;
+  margin-bottom: 20px;
+}
+
+.randomtriptext {
+  position: absolute;
+  top: 12.5%;
+  left: 50%;
+  transform: translate(-50%, -88.5%);
+  font-size: 35px;
+  font-family: 'Fredericka the Great', cursive;
+  background-color: rgba(0, 0, 0, 0.187);
+  width: 750px;
+}
+
+.randomtripbutton {
+  font-size: 20px;
+  margin-left: 45%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: #2B4865;
+  border-color: #002B5B;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: white;
+}
+
+.randomtripheader {
+  font-family: 'Gloria Hallelujah', cursive;
+}
 
 #index-title-text {
   font-size: 55px;

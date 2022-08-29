@@ -11,6 +11,8 @@ import AboutUs from "./pages/AboutUs";
 import ExternalResources from "./pages/ExternalResources";
 import SevenWonders from "./pages/SevenWonders";
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
+import RandomTrip from "./pages/RandomTrip";
+
 
 class App extends Component {
 
@@ -116,6 +118,7 @@ class App extends Component {
               createTrip={this.createTrip} 
               current_user = {this.props.current_user}/> 
               }/> 
+            <Route exact path="/triprandom" component={RandomTrip} />  
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/sevenwonders" component={SevenWonders} />
             <Route exact path="/externalresources" component={ExternalResources} />  
