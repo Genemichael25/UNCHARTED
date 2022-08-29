@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Card, CardTitle, Col, Row, CardImg, Container, Grid } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import { format } from "date-fns"
 
 class TripIndex extends Component {
 render() {
@@ -41,7 +42,7 @@ render() {
                       </div>
                       <div className="date-text"> 
                       <hr></hr>
-                        Date: {trip.from} to {trip.to}
+                        Date: {format(new Date(trip.from), "MM/dd/yyyy")} to {format(new Date(trip.to), "MM/dd/yyyy")}
                       </div>
                       <br></br>
                       <p>

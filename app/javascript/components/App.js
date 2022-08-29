@@ -9,8 +9,9 @@ import TripEdit from "./pages/TripEdit";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import ExternalResources from "./pages/ExternalResources";
-import SevenWonders from "./pages/SevenWonders";
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
+import SevenWondersSlides from "./pages/SevenWondersSlides";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 class App extends Component {
 
@@ -117,7 +118,7 @@ class App extends Component {
               current_user = {this.props.current_user}/> 
               }/> 
             <Route exact path="/aboutus" component={AboutUs} />
-            <Route exact path="/sevenwonders" component={SevenWonders} />
+            <Route exact path="/sevenwondersslides" component={SevenWondersSlides} />
             <Route exact path="/externalresources" component={ExternalResources} />  
             <Route component={NotFound} />
            </Switch>
@@ -125,7 +126,7 @@ class App extends Component {
            )} 
 
           <Route exact path="/aboutus" component={AboutUs} />
-          <Route exact path="/sevenwonders" component={SevenWonders} />
+          <Route exact path="/sevenwondersslides" component={SevenWondersSlides} />
           <Route exact path="/externalresources" component={ExternalResources} />
           <Route component={NotFound} />
         </Switch>

@@ -9,6 +9,7 @@ import {
   Button,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import { format } from "date-fns"
 
 class TripShow extends Component {
   render() {
@@ -28,7 +29,7 @@ class TripShow extends Component {
                 <CardSubtitle>{trip.location}</CardSubtitle>
                 <hr></hr>
                 <CardText>
-                  Dates: {trip.from} to {trip.to}
+                  Dates: {format(new Date(trip.from), "MM/dd/yyyy")} to {format(new Date(trip.to), "MM/dd/yyyy")}
                 </CardText>
                 <CardText>
                   Travel Buddies: {trip.travel_buddies}
