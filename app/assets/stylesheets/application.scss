@@ -5,6 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Yantramanav&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+
  // _____"ABOUT US" Styling_____
 
 .aboutus-logo {
@@ -86,12 +89,14 @@
     color: white;
 }
 .collapse-navbar-collapse {
-    background-color: #F7ECDE;
-    font-size: 26px
+    background-color: #E9DAC1;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 .nav-link {
      color: white;
-     font-size:26px
+     font-size:26px;
 }
 .nav-link:hover {
     color: #002B5B;
@@ -113,11 +118,13 @@ a {
 
 .resource-title {
     color: black;
-    font-family: 'Gloria Hallelujah', cursive;
     font-weight: bolder;
     background-color: white;
     padding: 3px;
     text-align: center;
+    opacity: 0.61;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 .transportation-logo {
     background-image: url('https://wallpaperaccess.com/full/5931192.jpg');
@@ -210,8 +217,10 @@ footer {
     position: relative;
     text-align: center;
     color: white;
+    
   }
- .centered {
+
+  .centered {
     position: absolute;
     top: 30%;
     left: 50%;
@@ -228,11 +237,12 @@ h3 {
     text-align: center;
 }
 
-// ______LogTrip-Page_____
+// ______LogTrip-Page & Edit Page_____
 
 .logtriptext{
     color: #54BAB9;
     text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .name-input , .location-input {
@@ -258,12 +268,21 @@ h3 {
 Form{
     background-color: #EAE2D4;
     margin: 30px;
+    padding: 40px;
+    padding-bottom: 175px
 }
 
 .namelocation, .groupinputlabel {
     display: flex;
     flex-direction: row;
     padding: 5px;
+}
+
+.submit-edit-button {
+  background-color: #2B4865;
+  border-color: #002B5B;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 24px;
 }
 
 // ______ShowTripCard_____
@@ -276,20 +295,54 @@ Form{
 .trip-detail-body {
     width: 400px;
     background-color: white;
+    height: 53vh;
+    position: center;
 }
 
-.showcard {
+.show-card {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #F7ECDE;
 }
 
-.nameofplace {
+.name-of-place {
     font-weight: bold;
     font-size: 20px;
 }
 
+#location-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+#show-date-text{
+  font-size: 17px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#travel-buddies-text {
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#comments-text {
+  font-size: 18px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.show-button{
+font-size: 18px;
+color: white; 
+position: relative; 
+top: 30%;
+right: 6%;
+background-color: #2B4865;
+border-color: #002B5B;
+font-family: 'Gloria Hallelujah', cursive;
+
+
+}
 // ______SevenWonders-Page_____
 
 .sevencard {
@@ -309,7 +362,7 @@ Form{
     background-color: #e4e2e2;
 }
 
-//___Home Page___
+
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Carter+One&family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,500&display=swap');
 
@@ -321,6 +374,7 @@ Form{
   width: 100%;
   height: 100%;
   margin-bottom: 100;
+
 }
 
 .box {
@@ -424,10 +478,53 @@ h1 span.spacer {
   text-align: center;
 }
 
+//_______Random Trip____________
+
+.randomtrip {
+  position:relative;
+  text-align: center;
+  color: white;
+}
+
+.randomtripimage {
+  width: 750px;
+  height: 500px;
+  opacity: 95%;
+  border-style: inset;
+  border-width: 4px;
+  border-color: black;
+  margin-bottom: 20px;
+}
+
+.randomtriptext {
+  position: absolute;
+  top: 12.5%;
+  left: 50%;
+  transform: translate(-50%, -88.5%);
+  font-size: 35px;
+  font-family: 'Fredericka the Great', cursive;
+  background-color: rgba(0, 0, 0, 0.187);
+  width: 750px;
+}
+
+.randomtripbutton {
+  font-size: 20px;
+  margin-left: 45%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: #2B4865;
+  border-color: #002B5B;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: white;
+}
+
+.randomtripheader {
+  font-family: 'Gloria Hallelujah', cursive;
+}
 
 #index-title-text {
   font-size: 55px;
-  font-family: 'DynaPuff', cursive;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 #index-subtitle-text {
@@ -438,7 +535,7 @@ h1 span.spacer {
 // _Index Page Background_
 .body {
   background-color:#F7ECDE;
-  height: 90vh;
+  height: 100vh;
 }
 
 .trip-title {
@@ -470,8 +567,9 @@ h1 span.spacer {
 }
 
 .s-button {
-  background-color: grey;
-  border-color: grey;
+  background-color: #2B4865;
+  border-color: #002B5B;
+  font-family: 'Gloria Hallelujah', cursive;
   padding: 15px 32px;
   margin: 8;
   margin-left: 0%;
@@ -484,7 +582,6 @@ h1 span.spacer {
   align-content:center;
   text-align: center;
   display: flex;
-  font-family: 'BioRhyme', serif;
 }
 
 * {
@@ -506,3 +603,119 @@ h1 span.spacer {
   margin-top: 20px;
   font-weight: bolder;
 }
+
+//_______Sign-up_________
+  
+.sign-up-form {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ width: 500px;
+ transform: translate(-50%, -50%);
+ background: #18978F;
+ background-repeat: repeat;
+ background-size: cover; 
+ font-size: 20px;
+}
+ .field {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: rgb(10, 10, 10);
+    input {
+      padding: 0.2rem;
+      font-size: 15px;
+      width: 100%;
+    }
+  }
+
+.actions {
+  font-size: small;
+}
+.header {
+  position: relative; top: 10px;
+  font-family: 'Fredericka the Great', cursive;
+  color: #dee2e6;
+}
+
+.error_message {
+  font-size: 20px;
+}
+
+//_______log-In___________
+
+.log-in-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  background: #18978F;
+  background-repeat: repeat;
+  background-size: cover; 
+  
+}
+  .field {
+     font-size: 20px;
+     margin-bottom: 5px;
+     color: rgb(10, 10, 10);
+     input {
+       padding: 0.2rem;
+       font-size: 15px;
+       width: 100%;
+     }
+   }
+ 
+ .actions {
+   font-size: small;
+ }
+
+ .bimage {
+  width: 300px;
+  height: 300px;
+ }
+
+ .header {
+  position: relative; top: 10px;
+  font-family: 'Fredericka the Great', cursive;
+  color: #dee2e6;
+}
+
+.off-screen {
+  position: absolute;
+  down: 10px;
+}
+
+element.style {
+  background-color: black!important;
+}
+
+.remember-me-txt {
+  color: black;
+  font-size: 15px;
+}
+
+
+
+
+//_____Forgot-P________
+
+.reset-pw-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  background: #18978F;
+  background-repeat: repeat;
+  background-size: cover; 
+}
+  .field {
+     font-size: 20px;
+     margin-bottom: 5px;
+     color: rgb(10, 10, 10);
+     input {
+       padding: 0.2rem;
+       font-size: 15px;
+       width: 100%;
+     }
+   }

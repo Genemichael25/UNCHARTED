@@ -18,31 +18,38 @@ class TripShow extends Component {
       <>
         <div>
           {trip && (
-            <Card className="showcard">
+            <Card 
+              className="show-card">
               <CardImg
                 className="trip-image"
                 src={trip.image}
                 alt="trip card image"
               />
               <CardBody className="trip-detail-body">
-                <CardTitle className="nameofplace">{trip.name}</CardTitle>
-                <CardSubtitle>{trip.location}</CardSubtitle>
+                <CardTitle className="name-of-place">{trip.name}</CardTitle>
+                <CardSubtitle id="location-text">
+                  {trip.location}               
+                </CardSubtitle>
                 <hr></hr>
+
                 <CardText>
                   Dates: {format(new Date(trip.from), "MM/dd/yyyy")} to {format(new Date(trip.to), "MM/dd/yyyy")}
+
                 </CardText>
-                <CardText>
+                <CardText id="travel-buddies-text">
                   Travel Buddies: {trip.travel_buddies}
                 </CardText>
-                <CardText>{trip.comments}</CardText>
+                <CardText id="comments-text">{trip.comments}</CardText>
                 <NavLink to={`/tripedit/${trip.id}`}>
                   <Button 
+                    className="show-button"
                     style={{ marginLeft: "15%" }}>
                       Edit Trip
                   </Button>
                 </NavLink>
                 <NavLink to={`/tripindex`}>
                   <Button
+                    className="show-button"
                     onClick={() => this.props.deleteTrip(trip.id)}
                     style={{ marginLeft: "20%" }}
                   >

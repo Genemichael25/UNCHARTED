@@ -34,7 +34,7 @@ class TripEdit extends Component {
   render() {
     return (
 <>
-       <h3 className="logtriptext">Edit Trip</h3>
+      <h3 className="logtriptext">Edit Trip</h3>
         <Form>
         <div className="namelocation">
           <FormGroup className="name-input">
@@ -59,8 +59,8 @@ class TripEdit extends Component {
             />
             </div>
           </FormGroup>
-         </div>
-         <div className="namelocation"> 
+        </div>
+        <div className="namelocation"> 
           <FormGroup className="frominput">
             <div className="groupinputlabel">
             <Label for="fromDate">From:</Label>
@@ -119,7 +119,13 @@ class TripEdit extends Component {
             />
             </div>
           </FormGroup>
-          <Button name="submit" onClick={this.handleSubmit}>
+          <Button 
+            className="submit-edit-button"
+            name="submit" 
+            onClick={this.handleSubmit}
+            style={{marginLeft: "48%", 
+            marginBottom:"10px"}}
+            >
             Update Trip
           </Button>
           {/* if submitted is true then go to tripindex page  */}

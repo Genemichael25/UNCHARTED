@@ -9,6 +9,7 @@ import TripEdit from "./pages/TripEdit";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import ExternalResources from "./pages/ExternalResources";
+import RandomTrip from "./pages/RandomTrip";
 import SevenWondersSlides from "./pages/SevenWondersSlides";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -117,6 +118,7 @@ class App extends Component {
               createTrip={this.createTrip} 
               current_user = {this.props.current_user}/> 
               }/> 
+            <Route exact path="/triprandom" component={RandomTrip} />  
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/sevenwondersslides" component={SevenWondersSlides} />
             <Route exact path="/externalresources" component={ExternalResources} />  
