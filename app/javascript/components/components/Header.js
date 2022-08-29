@@ -72,6 +72,9 @@ class Header extends React.Component {
                     <DropdownItem>
                       <a href="/tripindex"> View Trips</a>
                     </DropdownItem>
+                    <DropdownItem>
+                      <a href="/triprandom"> Random Trip</a>
+                    </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
               )}
