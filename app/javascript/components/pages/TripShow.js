@@ -18,14 +18,14 @@ class TripShow extends Component {
         <div>
           {trip && (
             <Card 
-              className="showcard">
+              className="show-card">
               <CardImg
                 className="trip-image"
                 src={trip.image}
                 alt="trip card image"
               />
               <CardBody className="trip-detail-body">
-                <CardTitle className="nameofplace">{trip.name}</CardTitle>
+                <CardTitle className="name-of-place">{trip.name}</CardTitle>
                 <CardSubtitle id="location-text">
                   {trip.location}               
                 </CardSubtitle>
@@ -33,7 +33,7 @@ class TripShow extends Component {
                 <CardText id="show-date-text">
                   Dates: {trip.from} to {trip.to}
                 </CardText>
-                <CardText id="travelbuddies-text">
+                <CardText id="travel-buddies-text">
                   Travel Buddies: {trip.travel_buddies}
                 </CardText>
                 <CardText id="comments-text">{trip.comments}</CardText>
