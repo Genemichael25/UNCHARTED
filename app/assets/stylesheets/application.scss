@@ -41,6 +41,7 @@
 #capstone-role {
   font-family: 'Indie Flower', cursive;
   font-weight: bold;
+  font-size: 30px;
 }
 
 //__Formats Bio Text__
@@ -53,8 +54,8 @@
   padding: 50;
   font-size: 18.5px;
   font-family: 'Yantramanav', sans-serif;
-  
 }
+
 .aboutus-bio-pic {
   position:relative;
   width: 100%; 
@@ -72,6 +73,7 @@
 }
 
 // ______Navbar-Header_____
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 .navbar-back{
     background-color: #54BAB9!important;
@@ -86,10 +88,11 @@
 }
 .collapse-navbar-collapse {
     background-color: #F7ECDE;
+    font-size: 26px
 }
 .nav-link {
-    color: white;
-    font-size:18px
+     color: white;
+     font-size:26px
 }
 .nav-link:hover {
     color: #002B5B;
@@ -100,6 +103,8 @@
 a {
     color: white;
     text-decoration: none;
+    font-family: 'Fredericka the Great', cursive;
+
 }
 .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
     color: #E9DAC1
@@ -109,50 +114,41 @@ a {
 
 .resource-title {
     color: black;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Gloria Hallelujah', cursive;
     font-weight: bolder;
     background-color: white;
     padding: 3px;
     text-align: center;
-    opacity: 0.61;
-    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-}
-.sub-title {
-    color: black;
-    font-weight: bolder;
-    font-family: 'Titillium Web', sans-serif;
-    background-color: white;
-    padding: 3px;
-    text-align: center;
-    opacity: 0.61;
-    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .transportation-logo {
     background-image: url('https://wallpaperaccess.com/full/5931192.jpg');
     background-size: 100%!important;
     width: 100vw;
     height: 100vh;
-    font-size:24px;
+    font-size:27px;
     background-repeat:no-repeat;
-    font-weight: bold;
+    font-weight: bold!important;
+    font-family: 'DynaPuff', cursive
 }
 .hotel-logo {
     background-image: url('https://wallpaperaccess.com/full/1191990.jpg');
     background-size: 100%!important;
     width: 100vw;
     height: 100vh;
-    font-size:24px;
+    font-size:27px;
     background-repeat:no-repeat;
     font-weight: bold;
+    font-family: 'DynaPuff', cursive
 }
 .helpful-logo {
     background-image: linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(10, 161, 243, 0.73)), url('https://images.reference.com/reference-production-images/question/aq/role-tour-guide_5ee3912ff215781a.jpg?width=760&height=411&fit=crop');
     background-size: 100%!important;
     width: 100vw;
     height: 100vh;
-    font-size:24px;
+    font-size:27px;
     background-repeat:no-repeat;  
     font-weight: bold;
+    font-family: 'DynaPuff', cursive
 }
 .nav-tabs {
     --bs-nav-tabs-border-width: 1px;
@@ -167,9 +163,10 @@ a {
     font-weight: bold;
 }
 .mini-header {
-    font-family: 'Yantramanav', sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
     font-weight: bolder;
-    color: white
+    color: white;
+    text-decoration: underline;
 }
 ::marker {
     unicode-bidi: isolate;
@@ -184,7 +181,6 @@ a {
     font-family: 'Yantramanav', sans-serif;
     font-weight: bolder;
 }
-
 
 // _____Footer______ 
 
@@ -314,32 +310,39 @@ Form{
     background-color: #e4e2e2;
 }
 
-.middlebar img {
-  width: 1300px;
-  height: auto;
-  position: relative;
+//___Home Page___
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Carter+One&family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,500&display=swap');
+
+#homepage-img-background {
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100;
 }
 
 .box {
   text-align: center;
+  margin-bottom: 70;
 }
 
-.title {
-  position: absolute;
-  text-align: center;
-  right: 61%;
-  top: 20%;
-  width: 50%;
-  transform: translate(33%);
-  color: rgb(15, 14, 14);
-  font-weight: bold;
+#homepage-overview-text-styling {
+font-size: 23.8px;
+text-align: justify;
+display: flex;
+justify-content: space-around;
+text-align: center;
+font-family: 'Archivo', sans-serif;
 }
 
 .text {
   position: absolute;
   text-align: center;
-  right: 61%;
-  top: 30%;
+  right: 60%;
+  top: 45%;
   width: 50%;
   transform: translate(33%);
   color: rgb(15, 14, 14);
@@ -347,18 +350,78 @@ Form{
   font-weight: bold;
   opacity: 0;
   transition: 0.25s;
-  font-size:large;
 }
+
 .text:hover {
   opacity: 1;
 }
 .text--blur {
   backdrop-filter: blur(10px);
 }
-.middlebar p {
-  text-align: center;
-}
+
 .button {
+  margin-bottom: 90!important;
+  top: 90%;
+  bottom: 50%;
+  right: 35%
+}
+
+#button-style{
+  background-color: #2B4865; 
+  border-color: #002B5B;
+  padding: 15px 32px;
+  position: absolute;
+  top: 91%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-text {
+  color: white;
+  font-size: 33px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 82vh
+}
+
+h1 span {
+  font-size: 70px;
+  font-weight: bolder;
+  font-family: 'Gloria Hallelujah', cursive;
+  letter-spacing: -1px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  right: 56%;
+  top: 12%;
+  width: 50%;
+  transform: translate(33%);
+  color: rgb(15, 14, 14);
+}
+
+h1 span.spacer {
+  padding: 0 5px;
+}
+
+
+// ________Trip Index_________
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.indexText {
+  position: relative;
   text-align: center;
 }
 
@@ -405,3 +468,71 @@ Form{
 .randomtripheader {
   font-family: 'Gloria Hallelujah', cursive;
 }
+
+#index-title-text {
+  font-size: 55px;
+  font-family: 'DynaPuff', cursive;
+}
+
+#index-subtitle-text {
+  font-size: 35px; 
+  font-family: 'Shadows Into Light', cursive;
+}
+
+// _Index Page Background_
+.body {
+  background-color:#F7ECDE;
+  height: 90vh;
+}
+
+.trip-title {
+  margin: 40px;
+  margin-bottom: 130px;
+  padding-bottom: 100 !important;
+}
+
+.nameofplace {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: 'Archivo', sans-serif;
+}
+
+.location-text {
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+.date-text {
+  font-size: 19px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#index-card-images {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 55
+}
+
+.s-button {
+  background-color: grey;
+  border-color: grey;
+  padding: 15px 32px;
+  margin: 8;
+  margin-left: 0%;
+  font-size: 25px;
+  font-weight: bold;
+  float: center;
+  position: sticky;
+  justify-content: center; 
+  align-self: stretch;
+  align-content:center;
+  text-align: center;
+  display: flex;
+  font-family: 'BioRhyme', serif;
+}
+
+* {
+  margin:0; 
+  padding: 0 
+}
+
