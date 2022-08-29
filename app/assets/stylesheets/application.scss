@@ -360,7 +360,7 @@ font-family: 'Gloria Hallelujah', cursive;
     background-color: #e4e2e2;
 }
 
-//___Home Page___
+
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Carter+One&family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,500&display=swap');
 
@@ -372,6 +372,7 @@ font-family: 'Gloria Hallelujah', cursive;
   width: 100%;
   height: 100%;
   margin-bottom: 100;
+
 }
 
 .box {
@@ -585,4 +586,128 @@ h1 span.spacer {
   margin:0; 
   padding: 0 
 }
+
+//_______Sign-up_________
+  
+.sign-up-form {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ width: 500px;
+ transform: translate(-50%, -50%);
+ background: #18978F;
+ background-repeat: repeat;
+ background-size: cover; 
+ font-size: 20px;
+}
+ .field {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: rgb(10, 10, 10);
+    input {
+      padding: 0.2rem;
+      font-size: 15px;
+      width: 100%;
+    }
+  }
+
+.actions {
+  font-size: small;
+}
+.header {
+  position: relative; top: 10px;
+  font-family: 'Fredericka the Great', cursive;
+  color: #dee2e6;
+}
+
+.error_message {
+  font-size: 20px;
+}
+
+//_______log-In___________
+
+.log-in-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  background: #18978F;
+  background-repeat: repeat;
+  background-size: cover; 
+  
+}
+  .field {
+     font-size: 20px;
+     margin-bottom: 5px;
+     color: rgb(10, 10, 10);
+     input {
+       padding: 0.2rem;
+       font-size: 15px;
+       width: 100%;
+     }
+   }
+ 
+ .actions {
+   font-size: small;
+ }
+
+ .bimage {
+  width: 300px;
+  height: 300px;
+ }
+
+ .header {
+  position: relative; top: 10px;
+  font-family: 'Fredericka the Great', cursive;
+  color: #dee2e6;
+}
+
+.off-screen {
+  position: absolute;
+  down: 10px;
+}
+
+element.style {
+  background-color: black!important;
+}
+
+.remember-me-txt {
+  color: black;
+  font-size: 15px;
+}
+
+
+
+
+//_____Forgot-P________
+
+.reset-pw-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  background: #18978F;
+  background-repeat: repeat;
+  background-size: cover; 
+}
+  .field {
+     font-size: 20px;
+     margin-bottom: 5px;
+     color: rgb(10, 10, 10);
+     input {
+       padding: 0.2rem;
+       font-size: 15px;
+       width: 100%;
+     }
+   }
+
+
+
+
+
+
+
+
 
