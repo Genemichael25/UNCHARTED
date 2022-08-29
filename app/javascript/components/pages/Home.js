@@ -6,25 +6,28 @@ class Home extends Component {
   render() {
     return (
     <>
-      <div className="middlebar">
-        <div className="box">
-          <img src="assets/vintage.webp" />
-        </div>
-        <div className="title">
-          <h1>Wanna Get Away?</h1>
-        </div>
-        <div className="text text--blur">
-          <p>
-            Revisiting trip highlights and those carefree moments has never been easier! For the first time ever, avid or aspiring travelers can now archive previous trips using photos and personal details. 'Uncharted' combines travel mapping and the art of journaling into an interactive life story experience. Document old memories, while creating new ones all in place! So whether you want a way to keep track of already visited destinations, searching for location inspiration, or are looking for resources on how to make traveling less complicated and more affordable; 'Uncharted' has your back.
+      <div className="image">
+          <img 
+              id="homepage-img-background"
+              src="assets/vintage.webp" 
+          />  
+          <h1 id="home-title-location"><span>
+            Wanna Get Away?
+          </span></h1>
+      <div className="text text--blur">
+          <p id="homepage-overview-text-styling">
+            'Uncharted' combines travel mapping and the art of journaling into an interactive life story experience... Revisiting trip highlights and those carefree moments has never been easier! Document old memories, while creating new ones all in place! 
           </p>
         </div>
-        <br />
-        < div className="button">
-          <Button>
-            <NavLink to={"/sevenwonders/"}>
+        <div className="button"> 
+          <Button id="button-style">
+            <NavLink 
+              className="button-text" 
+              to={"/sevenwonders/"}>
               Need Inspiration?
             </NavLink>
-          </Button>
+          </Button> 
+          <br />
         </div>
       </div>
     </>
@@ -32,4 +35,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Home
