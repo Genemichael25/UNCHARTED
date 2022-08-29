@@ -67,4 +67,3 @@ render() {
   }
 }
 export default TripIndex
-//test
