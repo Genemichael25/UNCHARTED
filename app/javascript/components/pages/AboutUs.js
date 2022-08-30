@@ -17,7 +17,7 @@ class AboutUs extends Component {
       <>
         <img 
           className="aboutus-logo" 
-          src="assets/codeEmpire.jpeg" 
+          src="/codeEmpire.jpeg" 
           alt="Code Empire Logo" 
           align-content= "center"
           vertical-align="middle"
