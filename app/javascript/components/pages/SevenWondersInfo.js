@@ -9,7 +9,7 @@ let wonders = [
         id: 2,
         name: "Taj Mahal",
         location: "Agra, India",
-        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5do7jKBKkVbFMP3O2jCfzdu6pYTLH0BbxmA&usqp=CAU"
+        image:"https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGFqJTIwbWFoYWx8ZW58MHx8MHx8&w=1000&q=80"
     },
     {
         id: 3,
@@ -21,25 +21,25 @@ let wonders = [
         id: 4,
         name: "Christ the Redeemer",
         location: "Rio de Janeiro, Brazil",
-        image:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Christ_on_Corcovado_mountain.JPG/800px-Christ_on_Corcovado_mountain.JPG?20121214014657"
+        image:"https://www.airpano.com/files/rio_christ_vr_01_big.jpg"
     },
     {
         id: 5,
         name: "Petra",
         location: "Jordan",
-        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc2yzt4nT1SjYbV3itXx6HZHVmqpCrsRsBbQ&usqp=CAU"
+        image:"https://wallpapercave.com/wp/wp2208073.jpg"
     },
     {
         id: 6,
         name: "Machu Picchu",
         location: "Peru",
-        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkk0Ppoj2lB1Dd02PIVUZr8S_w4zh4xvrlRQ&usqp=CAU"
+        image:"https://images6.alphacoders.com/299/thumb-1920-299834.jpg"
     },
     {
         id: 7,
         name: "Chichen Itza",
         location: "Yucatan, Mexico",
-        image:"https://upload.wikimedia.org/wikipedia/commons/e/e5/Chichen_Itza_CB.jpg"
+        image:"https://farm3.staticflickr.com/2646/5796877780_52cc2bd5c2_o.jpg"
     }
 ]
 export default wonders
