@@ -31,7 +31,7 @@ class AboutUs extends Component {
                 <CardBody className="aboutus-card">
                     <img 
                     className="aboutus-bio-pic" 
-                    src="assets/Gene.png" 
+                    src="/Gene.png" 
                     alt="Gene's Profile" 
                     width="auto"
                     height="auto"
@@ -50,7 +50,7 @@ class AboutUs extends Component {
                     <NavLink> 
                       <a href="https://github.com/Genemichael25" target="_blank"> 
                       <img 
-                      src="assets/githubIcon.png"
+                      src="/githubIcon.png"
                       className="aboutus-GitHub-icon"
                       width="60"
                       height="40"
@@ -62,7 +62,7 @@ class AboutUs extends Component {
                     <NavLink> 
                       <a href="https://www.linkedin.com/in/gene-martinez/" target="_blank"> 
                       <img 
-                      src="assets/linkedinIcon.png" 
+                      src="/linkedinIcon.png" 
                       className="aboutus-LinkedIn-icon"
                       width="60"
                       height="48"
@@ -80,7 +80,7 @@ class AboutUs extends Component {
                 <CardBody className="aboutus-card">
                     <img 
                     className="aboutus-bio-pic" 
-                    src="assets/Ahmed.jpeg" 
+                    src="/Ahmed.jpeg" 
                     alt="Ahmed's Profile" 
                     width="auto"
                     height="auto"
@@ -99,7 +99,7 @@ class AboutUs extends Component {
                     <NavLink> 
                       <a href="https://github.com/Ahmedkhafaji" target="_blank"> 
                       <img 
-                      src="assets/githubIcon.png"
+                      src="/githubIcon.png"
                       className="aboutus-GitHub-icon"
                       width="60"
                       height="40"
@@ -111,7 +111,7 @@ class AboutUs extends Component {
                     <NavLink> 
                       <a href="https://www.linkedin.com/in/ahmed-alkhafaji/" target="_blank"> 
                       <img 
-                      src="assets/linkedinIcon.png" 
+                      src="/linkedinIcon.png" 
                       className="aboutus-LinkedIn-icon"
                       width="60"
                       height="48"
@@ -129,7 +129,7 @@ class AboutUs extends Component {
                 <CardBody className="aboutus-card">
                     <img 
                     className="aboutus-bio-pic" 
-                    src="assets/Steven.png" 
+                    src="/Steven.png" 
                     alt="Steven's Profile" 
                     width="auto"
                     height="auto"
@@ -148,7 +148,7 @@ class AboutUs extends Component {
                     <NavLink> 
                       <a href="https://github.com/scharlez" target="_blank"> 
                       <img 
-                      src="assets/githubIcon.png"
+                      src="/githubIcon.png"
                       className="aboutus-GitHub-icon"
                       width="60"
                       height="40"
@@ -160,7 +160,7 @@ class AboutUs extends Component {
                     <NavLink> 
                       <a href="https://www.linkedin.com/in/steven-charlez-dunn/" target="_blank"> 
                       <img 
-                      src="assets/linkedinIcon.png" 
+                      src="/linkedinIcon.png" 
                       className="aboutus-LinkedIn-icon"
                       width="60"
                       height="48"
@@ -178,7 +178,7 @@ class AboutUs extends Component {
                 <CardBody className="aboutus-card">
                     <img 
                     className="aboutus-bio-pic" 
-                    src="assets/Leo.png" 
+                    src="/Leo.png" 
                     alt="Leo's Profile" 
                     width="auto"
                     height="auto"
@@ -197,7 +197,7 @@ class AboutUs extends Component {
                     <NavLink> 
                       <a href="https://github.com/LeoContreras93" target="_blank"> 
                       <img 
-                      src="assets/githubIcon.png"
+                      src="/githubIcon.png"
                       className="aboutus-GitHub-icon"
                       width="60"
                       height="40"
@@ -209,7 +209,7 @@ class AboutUs extends Component {
                     <NavLink> 
                       <a href="https://www.linkedin.com/in/leo-contreras/" target="_blank"> 
                       <img 
-                      src="assets/linkedinIcon.png" 
+                      src="/linkedinIcon.png" 
                       className="aboutus-LinkedIn-icon"
                       width="60"
                       height="48"

@@ -8,7 +8,7 @@ class NotFound extends Component {
       <div className="notfound">
         <img
           className="notfound-image"
-          src="assets/desert2.jpeg"
+          src="/desert2.jpeg"
           alt="notfound"
           width={"100%"}
           height={"650px"}
