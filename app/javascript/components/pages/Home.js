@@ -9,7 +9,7 @@ class Home extends Component {
       <div className="image">
           <img 
               id="homepage-img-background"
-              src="public/vintage.webp" 
+              src="/vintage.webp" 
           />  
           <h1 id="home-title-location"><span>
             Wanna Get Away?
