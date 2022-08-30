@@ -23,7 +23,7 @@ class Home extends Component {
           <Button id="button-style">
             <NavLink 
               className="button-text" 
-              to={"/sevenwonders/"}>
+              to={"/sevenwondersslides/"}>
               Need Inspiration?
             </NavLink>
           </Button> 
