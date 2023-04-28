@@ -35,8 +35,7 @@ class Header extends React.Component {
       sign_in_route,
       sign_out_route,
     } = this.props
-    console.log("logged_in:", logged_in)
-    console.log("current_user:", current_user)
+   
     return (
       <>
         <Navbar className="navbar-back" color="light" light expand="md">
