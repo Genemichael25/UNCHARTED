@@ -1,5 +1,5 @@
 # UNCHARTED   
-[Live Link](https://thawing-oasis-45194.herokuapp.com/)
+[Live Link](https://uncharted-app.onrender.com/)
 
 ## Overview
 Revisiting trip highlights and those carefree moments has never been easier! For the first time ever, avid or aspiring travelers can now archive previous trips using photos and personal details. 'Uncharted' combines travel mapping and the art of journaling into an interactive life story experience. Document old memories, while creating new ones all in place! So whether you want a way to keep track of already visited destinations, searching for location inspiration, or are looking for resources on how to make traveling less complicated and more affordable; 'Uncharted' has your back.   
@@ -52,3 +52,11 @@ This is a React in Rails application with full CRUD functionality. We used the g
 - Leo (Project Manager) [linkedin](https://www.linkedin.com/in/leo-contreras/) [Github](https://github.com/LeoContreras93)
 - Steven (Product Manager) [linkedin](https://www.linkedin.com/in/steven-charlez-dunn/) [Github](https://github.com/scharlez)
 
+### Updates
+
+- [ ] 🐛 Edit and Delete button below footer in show page
+- [ ] 💅 About Us
+- [ ] ✨ Random Trip Start Initial page
+- [ ] ✨ API for flights? ie Skyscanner?
+- [ ] 💅 Mobile friendly
+- [ ] 💅 Home Page Redesign
