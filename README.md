@@ -52,3 +52,11 @@ This is a React in Rails application with full CRUD functionality. We used the g
 - Leo (Project Manager) [linkedin](https://www.linkedin.com/in/leo-contreras/) [Github](https://github.com/LeoContreras93)
 - Steven (Product Manager) [linkedin](https://www.linkedin.com/in/steven-charlez-dunn/) [Github](https://github.com/scharlez)
 
+### Updates
+
+- [ ] 🐛 Edit and Delete button below footer in show page
+- [ ] 💅 About Us
+- [ ] ✨ Random Trip Start Initial page
+- [ ] ✨ API for flights? ie Skyscanner?
+- [ ] 💅 Mobile friendly
+- [ ] 💅 Home Page Redesign
